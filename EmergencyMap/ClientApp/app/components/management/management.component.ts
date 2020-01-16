@@ -6,18 +6,18 @@ import { Http } from '@angular/http';
     templateUrl: './management.component.html'
 })
 export class ManagementComponent {
-    public forecasts: WeatherForecast[];
+    public users: User[];
 
     constructor(http: Http, @Inject('BASE_URL') baseUrl: string) {
-        http.get(baseUrl + 'api/Management/WeatherForecasts').subscribe(result => {
-            this.forecasts = result.json() as WeatherForecast[];
+        http.get(baseUrl + 'api/Management/GetUsers').subscribe(result => {
+            this.users = result.json() as User[];
         }, error => console.error(error));
     }
 }
 
-interface WeatherForecast {
-    dateFormatted: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
+interface User {
+    Name: string;
+    LastName: string;
+    id: string;
+    phone: string;
 }
