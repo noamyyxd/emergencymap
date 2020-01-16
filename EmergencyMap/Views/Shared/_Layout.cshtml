@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - מוכנות לחירום</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+</head>
+<body style="direction:rtl;">
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRRxhcfmpyKYJYzrIOto8-em9drj7M3lo"></script>
+</body>
+</html>
